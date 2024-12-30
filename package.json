@@ -1,0 +1,17 @@
+{
+  "name": "psql-sheet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [
+    "psql",
+    "Google Sheets",
+    "queries"
+  ],
+  "author": "",
+  "license": "MIT",
+  "description": "Output psql results to Google Sheets",
+  "dependencies": {
+    "@google-cloud/local-auth": "^3.0.1",
+    "googleapis": "^144.0.0"
+  }
+}
