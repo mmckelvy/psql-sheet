@@ -6,31 +6,28 @@ Output your psql queries to Google Sheets.
 
 ## Configure your Google account
 
-  1.  Create a Google Cloud Project:
+1.  Create a Google Cloud Project:
+  * Go to Google Cloud Console
+  * Click "New Project" and create one
+  * Note your Project ID
 
-    * Go to Google Cloud Console
-    * Click "New Project" and create one
-    * Note your Project ID
+2.  Enable the necessary APIs:
+  * In Cloud Console, go to "APIs & Services" > "Library"
+  * Search for and enable:
+  * Google Sheets API
+  * Google Drive API
 
-  2.  Enable the necessary APIs:
-
-    * In Cloud Console, go to "APIs & Services" > "Library"
-    * Search for and enable:
-    * Google Sheets API
-    * Google Drive API
-
-  3.  Create Service Account credentials:
-
-    * Go to "APIs & Services" > "Credentials"
-    * Click "Create Credentials" > "Service Account"
-    * Fill in service account details
-    * Click "Create and Continue"
-    * Click "Done"
-    * Find the service account in the credentials page
-    * Click on it and go to "Keys" tab
-    * Add Key > Create new key > JSON
-    * Download the JSON key file
-    * Add the JSON key file to your project
+3.  Create Service Account credentials:
+  * Go to "APIs & Services" > "Credentials"
+  * Click "Create Credentials" > "Service Account"
+  * Fill in service account details
+  * Click "Create and Continue"
+  * Click "Done"
+  * Find the service account in the credentials page
+  * Click on it and go to "Keys" tab
+  * Add Key > Create new key > JSON
+  * Download the JSON key file
+  * Add the JSON key file to your project
 
 ## Set up a script to receive your psql query output
 
@@ -57,7 +54,7 @@ const psqlSheet = require('psql-sheet');
 
 ## Pipe your psql output to your .js script.
 
-```bash
+```
 
 # connect to your DB
 psql -d your-db
@@ -73,7 +70,7 @@ Find your service account email under the `client_email` property in your JSON k
 
 ## Run your queries
 
-```bash
+```
 [local]:5432 yourusername@your-db=# select * from my_table;
 ```
 
