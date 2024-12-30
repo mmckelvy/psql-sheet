@@ -1,4 +1,4 @@
-# psqlSheet
+# psql sheet
 
 Output your psql queries to Google Sheets.
 
@@ -7,27 +7,27 @@ Output your psql queries to Google Sheets.
 ## Configure your Google account
 
 1.  Create a Google Cloud Project:
-  * Go to Google Cloud Console
-  * Click "New Project" and create one
-  * Note your Project ID
+    * Go to Google Cloud Console
+    * Click "New Project" and create one
+    * Note your Project ID
 
 2.  Enable the necessary APIs:
-  * In Cloud Console, go to "APIs & Services" > "Library"
-  * Search for and enable:
-  * Google Sheets API
-  * Google Drive API
+    * In Cloud Console, go to "APIs & Services" > "Library"
+    * Search for and enable:
+    * Google Sheets API
+    * Google Drive API
 
 3.  Create Service Account credentials:
-  * Go to "APIs & Services" > "Credentials"
-  * Click "Create Credentials" > "Service Account"
-  * Fill in service account details
-  * Click "Create and Continue"
-  * Click "Done"
-  * Find the service account in the credentials page
-  * Click on it and go to "Keys" tab
-  * Add Key > Create new key > JSON
-  * Download the JSON key file
-  * Add the JSON key file to your project
+    * Go to "APIs & Services" > "Credentials"
+    * Click "Create Credentials" > "Service Account"
+    * Fill in service account details
+    * Click "Create and Continue"
+    * Click "Done"
+    * Find the service account in the credentials page
+    * Click on it and go to "Keys" tab
+    * Add Key > Create new key > JSON
+    * Download the JSON key file
+    * Add the JSON key file to your project
 
 ## Set up a script to receive your psql query output
 
@@ -57,9 +57,11 @@ const psqlSheet = require('psql-sheet');
 ```
 
 # connect to your DB
+
 psql -d your-db
 
 # Set the output format to csv with no footers and pipe it to the file you just created.
+
 [local]:5432 yourusername@your-db=# \pset footer off \a \f ',' \o |./your-file.js
 
 ```
