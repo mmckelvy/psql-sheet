@@ -1,5 +1,5 @@
 {
-  "name": "psql-sheet",
+  "name": "@mmckelvy/psql-sheet",
   "version": "1.0.0",
   "main": "index.js",
   "keywords": [
@@ -7,9 +7,9 @@
     "Google Sheets",
     "queries"
   ],
-  "author": "",
+  "author": "Mark McKelvy",
   "license": "MIT",
-  "description": "Output psql results to Google Sheets",
+  "description": "Output psql results to a Google spreadsheet",
   "dependencies": {
     "@google-cloud/local-auth": "^3.0.1",
     "googleapis": "^144.0.0"
