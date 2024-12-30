@@ -1,6 +1,6 @@
 # psql sheet
 
-Output your psql queries to Google Sheets.
+Output your psql queries to a Google spreadsheet.
 
 # Usage
 
@@ -76,4 +76,4 @@ Find your service account email under the `client_email` property in your JSON k
 [local]:5432 yourusername@your-db=# select * from my_table;
 ```
 
-The results will show up in your Google Sheet.
+The results will show up in your spreadsheet.
